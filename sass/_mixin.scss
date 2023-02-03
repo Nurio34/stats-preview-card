@@ -1,0 +1,18 @@
+@mixin font ($ff,$fs,$fw) {
+    font : {
+        family : $ff ;
+        size : $fs;
+        weight : $fw;
+    }
+}
+
+@mixin text ($clr,$algn){
+    color : $clr;
+    text : {
+        align : $algn; 
+    }
+}
+
+@mixin background ($clr) {
+    background-color: $clr;
+}

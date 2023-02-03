@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+@import 'reset';
+@import 'mixin';
+@import 'conf';
+
+
+body{
+    @include background($clr-100);
+    display: flex;
+    justify-content: center;
+    
+    main{
+        @include background($clr-200);
+        height: max-content;
+        margin:3rem 1rem 0;
+        border-radius: 1rem ;
+
+        
+        picture{
+            @include background($clr-300);
+            border-radius: 1rem 1rem 0 0;
+
+            img{
+                opacity: 0.3;
+                filter: contrast(1);
+                border-radius: 1rem 1rem 0 0;
+                width: 100%;
+
+            }
+        }
+
+        section{
+            border:none;
+    
+            h1{
+                @include text($clr-400,$txt-algn-100);
+                @include font($ff-100,auto,$ff-200);
+                margin:2rem 3.02rem 1rem;
+                letter-spacing: 1px;
+    
+                span{
+                    @include text($clr-300,auto);
+                }
+            }
+    
+            p{
+                @include font($ff-100,$fs-100,$fw-100);
+                @include text($clr-500,$txt-algn-100);
+                margin:0 2.21rem;
+
+            }
+
+            footer{
+                margin:2rem 0;
+
+                ul{
+                    display:grid;
+                    justify-content: center;
+                    row-gap: 2rem;
+
+                    li{
+                        @include font($ff-100,1.5rem,$fw-200);
+                        @include text($clr-400,$txt-algn-100);
+                        display:grid;
+
+                        span{
+                            @include font(inherit,$fs-100,$fw-100);
+                            @include text($clr-600,$txt-algn-100);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import 'min-900';
